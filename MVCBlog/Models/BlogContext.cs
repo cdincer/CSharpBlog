@@ -6,8 +6,11 @@ using System.Web;
 
 namespace MVCBlog.Models
 {
-    public class BlogContext:DbContext
+    public class BlogContext : DbContext
     {
+        public BlogContext() : base("name=DefaultConnection")
+        { }
+       
 
         public DbSet<BlogPost> BlogTables { get; set; }
     }

@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
-
+@model MVCBlog.Models.BlogPost
 <!-- Page Content -->
 <div class="container">
     <div class="row">
@@ -139,28 +139,28 @@
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.PostTitle)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FirstMidName)
+            @Html.DisplayNameFor(model => model.PostContent)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EnrollmentDate)
+            @Html.DisplayNameFor(model => model.PostDate)
         </th>
         <th></th>
     </tr>
 </table>
-@foreach (var item in Model)
+@foreach (var item in Models)
 {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.LastName)
+            @Html.DisplayFor(modelItem => item.PostTitle)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstMidName)
+            @Html.DisplayFor(modelItem => item.PostContent)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            @Html.DisplayFor(modelItem => item.PostDate)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
