@@ -9,12 +9,12 @@ namespace MVCBlog.Controllers
     public class HomeController : Controller
     {
 
-        //private MVCBlog.Models.BlogContext db = new MVCBlog.Models.BlogContext();
+        private MVCBlog.Models.BlogContext db = new MVCBlog.Models.BlogContext();
 
-        // GET: Home
+        // GET: HomeS
         public ActionResult Index()
         {
-            return View();
+            return View(db.BlogTables);
         }
 
 
