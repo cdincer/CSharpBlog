@@ -76,3 +76,10 @@ C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\PagedList.dll
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\PagedList.Mvc.dll
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\PagedList.xml
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\PagedList.Mvc.xml
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\Antlr3.Runtime.dll
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\Newtonsoft.Json.dll
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Optimization.dll
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\WebGrease.dll
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\Antlr3.Runtime.pdb
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\Newtonsoft.Json.xml
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Optimization.xml

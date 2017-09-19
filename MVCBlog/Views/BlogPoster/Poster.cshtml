@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Poster";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+@model MVCBlog.Models.BlogPost
+<!-- Doesnt work yet.-->
+<h2>Poster</h2>
+
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(x => x.PostTitle, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.PostContent, new { @id = "summernote" })
+
+    <input type="submit" name="name" value="Send" />
+}
+
+
+<script>
+        $(document).ready(function () {
+            $('#summernote').summernote();
+        });
+</script>
