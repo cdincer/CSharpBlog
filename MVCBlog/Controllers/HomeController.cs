@@ -14,7 +14,8 @@ namespace MVCBlog.Controllers
         // GET: HomeS
         public ActionResult Index()
         {
-            return View(db.BlogTables);
+            var model = db.BlogTables.ToList();
+            return View(model);
         }
 
 
