@@ -53,6 +53,8 @@ namespace MVCBlog.Controllers
             using (var context = new MVCBlog.Models.BlogContext())
             {
 
+                var blog= context.UserTable.Where(b=>b.Email== "candin@h.com");
+                var tester = context.UserTable.Any(x => x.Email == model.Email && x.Password == model.Password);
                 if (context.UserTable.Any(x => x.Email == model.Email && x.Password == model.Password))
                 {
 
@@ -67,7 +69,6 @@ namespace MVCBlog.Controllers
                 }
             }
 
-                return View();
         }
 
         public ActionResult Register()
