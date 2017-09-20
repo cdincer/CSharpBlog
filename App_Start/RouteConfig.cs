@@ -16,7 +16,7 @@ namespace MVCBlog
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Poster", id = UrlParameter.Optional }
             );
         }
     }

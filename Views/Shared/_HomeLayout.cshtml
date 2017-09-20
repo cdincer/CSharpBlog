@@ -4,6 +4,7 @@
 }*@
 
 <!DOCTYPE html>
+@using System.Web.Optimization
 
 <html>
 <head>
@@ -12,10 +13,10 @@
     <meta name="description" content="">
     <meta name="author" content="">    <title>Home</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="~/css/blog-home.css" rel="stylesheet">
+    @Styles.Render("~/style/bundles")
+
+
+
 
 </head>
 <body>
@@ -31,14 +32,9 @@
 
 
 
-    @* js *@
+    @Scripts.Render("~/script/bundles")
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="~/vendor/jquery/jquery.min.js"></script>
-    <script src="~/vendor/popper/popper.min.js"></script>
-    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="/js/clean-blog.min.js"></script>
+
 
 </body>
 </html>

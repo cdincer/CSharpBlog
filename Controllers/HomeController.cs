@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MVCBlog.Controllers
 {
     public class HomeController : Controller
     {
 
-        private MVCBlog.Models.BlogContext db = new MVCBlog.Models.BlogContext();
+        public MVCBlog.Models.BlogContext db = new MVCBlog.Models.BlogContext();
 
         // GET: HomeS
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            return View(db.BlogTables);
+            int pageIndex = page ?? 1;
+
+            var data = db.BlogTables.OrderBy(x => x.ID).ToPagedList(pageIndex,10);
+            //var model = db.BlogTables.ToList();
+            return View(data);
         }
 
 
