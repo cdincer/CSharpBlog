@@ -8,8 +8,10 @@ namespace MVCBlog.Controllers
 {
     public class BlogPosterController : Controller
     {
+        public MVCBlog.Models.BlogContext db = new MVCBlog.Models.BlogContext();
+
         // GET: BlogPoster
-        public ActionResult Index()
+        public ActionResult Poster()
         {
             return View();
         }
