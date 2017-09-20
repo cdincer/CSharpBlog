@@ -126,6 +126,11 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="js\gulpfile.js" />
+    <Content Include="Summernote\css\bootstrap.css" />
+    <Content Include="Summernote\css\summernote.css" />
+    <Content Include="Summernote\js\bootstrap.js" />
+    <Content Include="Summernote\js\jquery.js" />
+    <Content Include="Summernote\js\summernote.js" />
     <Content Include="vendor\bootstrap\blog-home.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -146,7 +151,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BlogPosterController.cs" />
+    <Compile Include="Controllers\BlogEditorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,7 +169,8 @@
     <Content Include="Views\Shared\_navbar.cshtml" />
     <Content Include="Views\Shared\_footer.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\BlogPoster\Poster.cshtml" />
+    <Content Include="Views\BlogEditor\Poster.cshtml" />
+    <Content Include="Views\BlogEditor\Editor.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

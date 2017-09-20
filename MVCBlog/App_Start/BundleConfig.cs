@@ -16,9 +16,9 @@ namespace MVCBlog.App_Start
             bundles.Add(new StyleBundle("~/style/bundles").Include(
               "~/vendor/bootstrap/css/bootstrap.css",
               "~/vendor/bootstrap/css/bootstrap.min.css",
-              "~/css/blog-home.css"
-              //"http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css",
-              //"http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css"
+              "~/css/blog-home.css",
+              "~/Summernote/css/bootstrap.css",
+              "~/Summernote/css/summernote.css"
               ));
 
             bundles.Add(new ScriptBundle("~/script/bundles").Include(
@@ -26,10 +26,10 @@ namespace MVCBlog.App_Start
                 "~/vendor/jquery/jquery.min.js",
                 "~/vendor/popper/popper.min.js",
                 "~/vendor/bootstrap/js/bootstrap.min.js",
-                "~/js/clean-blog.min.js"
-                //"http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js",
-                //"http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js",
-                //"http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"
+                "~/js/clean-blog.min.js",
+                "~/Summernote/js/bootstrap.js",
+                "~/Summernote/js/jquery.js",
+                "~/Summernote/js/summernote.js"
                 ));
 
             #endregion
