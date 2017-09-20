@@ -151,6 +151,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogEditorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -159,6 +160,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BlogContext.cs" />
     <Compile Include="Models\BlogPost.cs" />
+    <Compile Include="Models\LoginVM.cs" />
+    <Compile Include="Models\RegisterVM.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +175,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\BlogEditor\Poster.cshtml" />
     <Content Include="Views\BlogEditor\Editor.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

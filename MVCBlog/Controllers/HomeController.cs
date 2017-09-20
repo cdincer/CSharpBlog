@@ -18,7 +18,7 @@ namespace MVCBlog.Controllers
         {
             int pageIndex = page ?? 1;
 
-            var data = db.BlogTables.OrderBy(x => x.ID).ToPagedList(pageIndex,10);
+            var data = db.BlogTable.OrderBy(x => x.ID).ToPagedList(pageIndex,10);
             //var model = db.BlogTables.ToList();
             return View(data);
         }

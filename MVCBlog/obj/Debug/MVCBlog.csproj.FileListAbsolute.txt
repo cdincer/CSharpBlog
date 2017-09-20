@@ -69,7 +69,6 @@ C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Webpages.Deployment
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Webpages.Razor.xml
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Helpers.xml
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Mvc.xml
-C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.csprojResolveAssemblyReference.cache
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.dll
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.pdb
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\PagedList.dll
@@ -83,3 +82,4 @@ C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\WebGrease.dll
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\Antlr3.Runtime.pdb
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\Newtonsoft.Json.xml
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Optimization.xml
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.csprojResolveAssemblyReference.cache
