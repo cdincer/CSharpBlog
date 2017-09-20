@@ -164,7 +164,6 @@
     <Content Include="Views\Shared\_navbar.cshtml" />
     <Content Include="Views\Shared\_footer.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\BlogPoster\BrokenPoster.cshtml" />
     <Content Include="Views\BlogPoster\Poster.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
