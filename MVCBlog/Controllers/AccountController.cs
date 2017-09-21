@@ -50,21 +50,22 @@ namespace MVCBlog.Controllers
         public ActionResult Login(UserModel model)
         {
             //Kullanıcı kontrolü. Kullanıcı var ise oturum aç, cookie oluştur
-            using (var context = new MVCBlog.Models.BlogContext())
+            using (var context = new BlogContext())
             {
 
                 var blog= context.UserTable.Where(b=>b.Email== "candin@h.com");
                 var tester = context.UserTable.Any(x => x.Email == model.Email && x.Password == model.Password);
                 if (context.UserTable.Any(x => x.Email == model.Email && x.Password == model.Password))
                 {
+                    FormsAuthentication.SetAuthCookie(model.Email, true);
+                    return RedirectToAction("Index", "Home");
 
-                    return RedirectToAction("BlogEditor", "Editor");
 
                 }
                 else
                 {
+                    return RedirectToAction("Editor", "BlogEditor");
 
-                    return RedirectToAction("Index", "Home");
 
                 }
             }
