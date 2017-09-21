@@ -23,6 +23,10 @@ namespace MVCBlog.Controllers
             return View(data);
         }
 
+        public ActionResult GetPage()
+        {
+            return View();
+        }
 
         //This is for reading a Blog Post not actually posting it.
         public ActionResult BlogPostPage()

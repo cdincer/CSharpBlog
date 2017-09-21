@@ -1,0 +1,43 @@
+﻿@model MVCBlog.Models.BlogPost
+
+@{
+    ViewBag.Title = "GetPage";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<h2>GetPage</h2>
+
+<div>
+    <h4>BlogPost</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PostTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editor", "BlogEditor", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

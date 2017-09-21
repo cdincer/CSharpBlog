@@ -176,6 +176,7 @@
     <Content Include="Views\BlogEditor\Poster.cshtml" />
     <Content Include="Views\BlogEditor\Editor.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\GetPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
