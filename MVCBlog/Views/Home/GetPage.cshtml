@@ -38,6 +38,11 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editor", "BlogEditor", new { id = Model.ID }) |
+
+
+    @Html.ActionLink("WAAA", "Editor", "BlogEditor", new { id = Model.ID }, null)
+
+
+    @Html.ActionLink("Editor", "/BlogEditor/Editor", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

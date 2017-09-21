@@ -23,9 +23,9 @@ namespace MVCBlog.Controllers
             return View(data);
         }
 
-        public ActionResult GetPage()
+        public ActionResult GetPage(int id)
         {
-            return View();
+            return View(db.BlogTable.Find(id));
         }
 
         //This is for reading a Blog Post not actually posting it.

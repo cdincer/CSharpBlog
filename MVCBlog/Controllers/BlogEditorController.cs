@@ -16,9 +16,9 @@ namespace MVCBlog.Controllers
             return View();
         }
 
-        public ActionResult Editor()
+        public ActionResult Editor(int id)
         {
-            return View();
+            return View(db.BlogTable.Find(id));
         }
     }
 }
