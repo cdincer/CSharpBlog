@@ -21,24 +21,27 @@ namespace MVCBlog.Controllers
         public MVCBlog.Models.BlogContext db = new MVCBlog.Models.BlogContext();
 
         //Oturumu açık olan userlar listesi
-        public ICollection<UserModel> GetUsers
+        public UserModel GetUsers
         {
             get
             {
                 if (Session["MyUsers"] == null)
                 {
-                    return new HashSet<UserModel>();
+                    return new UserModel();
                 }
-                return (ICollection<UserModel>)Session["MyUsers"];
+                return (UserModel)Session["MyUsers"];
             }
         }
 
         //Sessiona kullanıcı ekler
         public void AddUserToSession(UserModel model)
         {
-            Session["MyUsers"] = GetUsers;
-            GetUsers.Add(model);
+            
+          
+            
+            Session["MyUsers"] = model;
         }
+
 
 
         public ActionResult Login()
@@ -53,10 +56,11 @@ namespace MVCBlog.Controllers
             using (var context = new BlogContext())
             {
 
-                var blog= context.UserTable.Where(b=>b.Email== "candin@h.com");
-                var tester = context.UserTable.Any(x => x.Email == model.Email && x.Password == model.Password);
+               
                 if (context.UserTable.Any(x => x.Email == model.Email && x.Password == model.Password))
                 {
+                    var kisi = context.UserTable.Where(x => x.Email == model.Email).First();
+                    AddUserToSession(kisi);
                     FormsAuthentication.SetAuthCookie(model.Email, true);
                     return RedirectToAction("Index", "Home");
 

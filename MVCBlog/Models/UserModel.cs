@@ -18,5 +18,7 @@ namespace MVCBlog.Models
         [Required]
         [RegularExpression(@"(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,12})$")]
         public string Password { get; set; }
+
+        public string UserRole { get; set; }
     }
 }

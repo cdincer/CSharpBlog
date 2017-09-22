@@ -6,7 +6,7 @@
 }
 
 <!-- Not Working-->
-@*<link rel="stylesheet"  href="~/Summernote/css/bootstrap.css"">
+@*<link rel="stylesheet"  href="/Content/Summernote/css/bootstrap.css"" standart file path example.>
 <link rel="stylesheet"  href="~/Summernote/css/summernote.css">
 <script src="~/Summernote/js/bootstrap.js"></script>
 <script src="~/Summernote/js/jquery.js"></script>
@@ -68,7 +68,8 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index")|
+    @Html.ActionLink("Editor", "Index", "Home", new { id = Model.ID }, null)
 </div>
 
 <script>
