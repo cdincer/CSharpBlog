@@ -26,6 +26,10 @@ namespace MVCBlog.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+
+         
+
         }
     }
 }

@@ -131,3 +131,14 @@ C:\Users\Wissen\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Mvc.xml
 C:\Users\Wissen\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.csprojResolveAssemblyReference.cache
 C:\Users\Wissen\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.dll
 C:\Users\Wissen\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.pdb
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\Antlr3.Runtime.dll
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\Newtonsoft.Json.dll
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\PagedList.dll
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\PagedList.Mvc.dll
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\System.Web.Optimization.dll
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\WebGrease.dll
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\Antlr3.Runtime.pdb
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\Newtonsoft.Json.xml
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\PagedList.xml
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\PagedList.Mvc.xml
+C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\System.Web.Optimization.xml
