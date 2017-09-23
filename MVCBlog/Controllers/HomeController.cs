@@ -33,5 +33,13 @@ namespace MVCBlog.Controllers
         {
             return View();
         }
+
+        public ActionResult GetCategories()
+        {
+            ViewBag.CategoryName = db.CategoryTable.ToList();
+
+                return View();
+        }
+     
     }
 }
