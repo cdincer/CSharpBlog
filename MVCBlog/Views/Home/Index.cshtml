@@ -9,7 +9,7 @@
 @using PagedList.Mvc
 
 @using MVCBlog.Models
-@model IPagedList<BlogPost>
+@model Tuple<IPagedList<BlogPost>,List<Category>>
 
 <div class="container">
     <h1 class="my-4">
@@ -17,7 +17,7 @@
     </h1>
     <div class="row">
 
-        @foreach (var item in Model)
+        @foreach (var item in Model.Item1)
 
         {
 
@@ -40,7 +40,7 @@
 
 </div>
 
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }), PagedListRenderOptions.Minimal)
+    @Html.PagedListPager(Model.Item1, page => Url.Action("Index", new { page = page }), PagedListRenderOptions.Minimal)
 
 
 
