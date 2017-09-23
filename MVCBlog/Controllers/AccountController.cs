@@ -81,21 +81,21 @@ namespace MVCBlog.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Register(RegisterVM model)
-        {
-            //ModelState.IsValid; RegisterVM içine yazdığımız DataAnnotationsa göre bool dönücek
-            if (ModelState.IsValid)
-            {
-                UserModel m = new UserModel();
-                m.Email = model.Email;
-                m.Password = model.Password;
-                AddUserToSession(m);
+        //[HttpPost]
+        //public ActionResult Register(RegisterVM model)
+        //{
+        //    //ModelState.IsValid; RegisterVM içine yazdığımız DataAnnotationsa göre bool dönücek
+        //    if (ModelState.IsValid)
+        //    {
+        //        UserModel m = new UserModel();
+        //        m.Email = model.Email;
+        //        m.Password = model.Password;
+        //        AddUserToSession(m);
 
-                return RedirectToAction("Login", "Account");
-            }
-            return View();
-        }
+        //        return RedirectToAction("Login", "Account");
+        //    }
+        //    return View();
+        //}
 
         public ActionResult Logout()
         {

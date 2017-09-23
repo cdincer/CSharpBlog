@@ -160,8 +160,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BlogContext.cs" />
     <Compile Include="Models\BlogPost.cs" />
-    <Compile Include="Models\LoginVM.cs" />
-    <Compile Include="Models\RegisterVM.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
