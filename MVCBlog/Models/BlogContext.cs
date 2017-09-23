@@ -14,5 +14,6 @@ namespace MVCBlog.Models
 
         public DbSet<BlogPost> BlogTable { get; set; }
         public DbSet<UserModel> UserTable { get; set; }
+        public DbSet<Category> CategoryTable { get; set; }
     }
 }
