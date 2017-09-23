@@ -14,5 +14,8 @@ namespace MVCBlog.Models
         [AllowHtml]
         public string PostContent { get; set; }
         public DateTime PostDate { get; set; }
+
+        public Category Category { get; set; }
+
     }
 }
