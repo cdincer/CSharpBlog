@@ -177,7 +177,6 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Home\GetPage.cshtml" />
     <Content Include="Views\BlogEditor\BlogList.cshtml" />
-    <Content Include="Views\Home\Index2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
