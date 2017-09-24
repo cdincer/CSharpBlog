@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using PagedList.Mvc;
+using MVCBlog.Models;
 
 namespace MVCBlog.Controllers
 {
@@ -34,12 +35,35 @@ namespace MVCBlog.Controllers
             return View();
         }
 
-        public ActionResult GetCategories()
+        public List<Category> GetCategories()
         {
-            ViewBag.CategoryName = db.CategoryTable.ToList();
-
-                return View();
+            List<Category> CategoriesList= new List<Category>();
+            var query = from c in db.CategoryTable
+                        select c; 
+                return query.ToList();
         }
+
+        public List<BlogPost> GetBlogPosts()
+        {
+            List<BlogPost> CategoriesList = new List<BlogPost>();
+            var query = from c in db.BlogTable
+                        select c;
+            return query.ToList();
+        }
+
+
+
+
+
+        public ActionResult Index2()
+        {
+            var model = new Tuple<List<MVCBlog.Models.BlogPost>,List<MVCBlog.Models.Category>
+                                  >(GetBlogPosts(),GetCategories());
+
+
+            return View(model);
+        }
+
      
     }
 }

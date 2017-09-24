@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+
+
+
+
+@using MVCBlog.Models
+@model Tuple<List<BlogPost>,List<Category>>
+
+<div class="container">
+    <h1 class="my-4">
+        A01 Blog
+    </h1>
+    <div class="row">
+
+        @foreach (var item in Model.Item1)
+
+        {
+
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    @*<a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>*@
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="/Home/GetPage/@item.ID">@item.PostTitle</a>
+                            <h4>@item.PostDate</h4>
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
+    @foreach (var item in Model.Item2)
+    {
+        <li>@item.CategoryName </li>
+    }
+</div>
+
+
