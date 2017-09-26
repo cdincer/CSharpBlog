@@ -82,7 +82,6 @@ C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\WebGrease.dll
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\Antlr3.Runtime.pdb
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\Newtonsoft.Json.xml
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Optimization.xml
-C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.csprojResolveAssemblyReference.cache
 C:\Users\Wissen\Source\Repos\CSharpBlog\MVCBlog\bin\roslyn\csc.exe
 C:\Users\Wissen\Source\Repos\CSharpBlog\MVCBlog\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Wissen\Source\Repos\CSharpBlog\MVCBlog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
