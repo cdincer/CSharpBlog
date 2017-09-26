@@ -141,3 +141,4 @@ C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\Newtonsof
 C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\PagedList.xml
 C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\PagedList.Mvc.xml
 C:\Users\Can\Documents\visual studio 2015\Projects\MVCBlog\MVCBlog\bin\System.Web.Optimization.xml
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.csprojResolveAssemblyReference.cache
