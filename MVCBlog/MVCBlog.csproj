@@ -181,6 +181,7 @@
     <Content Include="Views\BlogEditor\BlogList.cshtml" />
     <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Shared\_widget.cshtml" />
+    <Content Include="Views\Home\GetPage2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

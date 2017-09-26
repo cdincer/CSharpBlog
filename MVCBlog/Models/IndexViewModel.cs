@@ -10,6 +10,7 @@ namespace MVCBlog.Models
         public IEnumerable<BlogPost> Items { get; set; }
         public Pager Pager { get; set; }
         public IEnumerable<Category> Items2 { get; set; }
+        public IEnumerable<CommentPost> Items3 { get; set; }
 
     }
 
