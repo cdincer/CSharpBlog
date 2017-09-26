@@ -40,7 +40,7 @@ namespace MVCBlog.Controllers
         {
             var dummyItems = db.BlogTable.OrderBy(x => x.ID);
             var dummyItems2 = db.CategoryTable.OrderBy(x => x.CategoryName);
-
+            var dummyItems3 = db.CommentTable.ToList();
             var count = db.BlogTable
             .OrderBy(x=>x.ID).Count();
             var pager = new Pager(count, page);
@@ -52,7 +52,8 @@ namespace MVCBlog.Controllers
                 Items = dummyItems.Skip((pager.CurrentPage - 1) * pager.PageSize).Take(pager.PageSize),
                 Pager = pager,
 
-                Items2 = dummyItems2
+                Items2 = dummyItems2,
+                Items3 = dummyItems3
             };
 
             return View(viewModel);

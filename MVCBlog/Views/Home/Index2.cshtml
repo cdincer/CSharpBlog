@@ -1,4 +1,11 @@
-﻿@model MVCBlog.Models.IndexViewModel
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+
+@model MVCBlog.Models.IndexViewModel
 
 <html>
 <head>
@@ -15,7 +22,7 @@
                 @foreach (var item in Model.Items)
                 {
                     <li>@item.PostContent</li>
-                    <li>@item.CommentPosts.</li>
+                    <li>@item.CommentPosts</li>
 
                 }
             </ul>
