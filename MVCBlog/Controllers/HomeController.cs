@@ -29,6 +29,34 @@ namespace MVCBlog.Controllers
             return View(db.BlogTable.Find(id));
         }
 
+
+        public ActionResult GetPage2(int? id)
+        {
+            //var blog2 = context.Blogs
+            //            .Where(b => b.Name == "ADO.NET Blog")
+            //            .Include("Posts")
+            //            .FirstOrDefault();
+
+            var dummyItems = db.BlogTable.FirstOrDefault(x=> x.ID==id);
+
+            var dummyItems2 = db.CategoryTable.FirstOrDefault(x => x.Id == dummyItems.CategoryId);
+
+            var dummyItems3 = db.CommentTable.Where(x=>x.BlogPostId== dummyItems.ID);
+        
+
+
+            var pageModel = new PageViewModel
+            {
+                Items = dummyItems,
+               
+
+                Items2 = dummyItems2,
+                Items3 = dummyItems3
+            };
+
+            return View(pageModel);
+        }
+
         //This is for reading a Blog Post not actually posting it.
         public ActionResult BlogPostPage()
         {
@@ -40,7 +68,7 @@ namespace MVCBlog.Controllers
         {
             var dummyItems = db.BlogTable.OrderBy(x => x.ID);
             var dummyItems2 = db.CategoryTable.OrderBy(x => x.CategoryName);
-            var dummyItems3 = db.CommentTable.ToList();
+            var dummyItems3 = db.CommentTable.OrderBy(x => x.BlogPost);
             var count = db.BlogTable
             .OrderBy(x=>x.ID).Count();
             var pager = new Pager(count, page);

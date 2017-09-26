@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "GetPage2";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+@using MVCBlog.Models
+@model MVCBlog.Models.PageViewModel
+<h2>GetPage2</h2>
+
+
+<div>
+    <h4>BlogPost</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Items.PostTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Items.PostTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Items.PostContent)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Items.PostContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Items.PostDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Items.PostDate)
+        </dd>
+
+    </dl>
+</div>
+
+<ul>
+    @foreach (var item in Model.Items3)
+    {
+        <li>@item.Comment</li>
+
+    }
+</ul>
+
+
+
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Items2.CategoryName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Items2.CategoryName)
+    </dd>
+</dl>
+
+<p>
+
+    @if ((UserModel)Session["MyUsers"] != null && ((UserModel)Session["MyUsers"]).UserRole == "Admin")
+    {
+        @Html.ActionLink("Editor", "Editor", "BlogEditor", new { id = Model.Items.ID }, null)
+    }
+
+
+  
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -157,12 +157,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709261155512_BlogPost-CategoryID add.cs" />
+    <Compile Include="Migrations\201709261155512_BlogPost-CategoryID add.Designer.cs">
+      <DependentUpon>201709261155512_BlogPost-CategoryID add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709261202344_BlogPostId added to Commentpost table.cs" />
+    <Compile Include="Migrations\201709261202344_BlogPostId added to Commentpost table.Designer.cs">
+      <DependentUpon>201709261202344_BlogPostId added to Commentpost table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BlogContext.cs" />
     <Compile Include="Models\BlogPost.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CommentPost.cs" />
     <Compile Include="Models\IndexViewModel.cs" />
+    <Compile Include="Models\PageViewModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -191,6 +200,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709261155512_BlogPost-CategoryID add.resx">
+      <DependentUpon>201709261155512_BlogPost-CategoryID add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709261202344_BlogPostId added to Commentpost table.resx">
+      <DependentUpon>201709261202344_BlogPostId added to Commentpost table.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

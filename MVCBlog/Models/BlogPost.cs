@@ -15,7 +15,10 @@ namespace MVCBlog.Models
         public string PostContent { get; set; }
         public DateTime PostDate { get; set; }
 
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+
         public ICollection<CommentPost> CommentPosts { get; set; }
 
 
