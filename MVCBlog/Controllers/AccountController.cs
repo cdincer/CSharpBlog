@@ -52,6 +52,7 @@ namespace MVCBlog.Controllers
         [HttpPost]
         public ActionResult Login(UserModel model)
         {
+           
             //Kullanıcı kontrolü. Kullanıcı var ise oturum aç, cookie oluştur
             using (var context = new BlogContext())
             {
@@ -61,7 +62,18 @@ namespace MVCBlog.Controllers
                 {
                     var kisi = context.UserTable.Where(x => x.Email == model.Email).First();
                     AddUserToSession(kisi);
-                    FormsAuthentication.SetAuthCookie(model.Email, true);
+                    /*First Way of Cookie Writing  */
+                    FormsAuthentication.SetAuthCookie(kisi.Email, true);
+                    /*Second Way of cookie writing */
+                    HttpCookie ACookie = new HttpCookie("UserModelKeeper");
+                    
+                    ACookie.Value = kisi.ID.ToString();
+
+                    Response.Cookies.Add(ACookie);
+                    /*---*/
+
+
+                    var takmaad = HttpContext.User.Identity.Name;
                     return RedirectToAction("Index", "Home");
 
 

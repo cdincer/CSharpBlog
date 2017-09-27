@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "GetPage2";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+@using MVCBlog.Models
+@model MVCBlog.Models.CommentPostModel
+
+
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal mx-">
+        <h4 style="padding-left:250px">BlogPost</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Items.ID)
+
+        @Html.HiddenFor(model => model.Items2.Id)
+        @Html.HiddenFor(model => model.Items2.UserModelId)
+        @Html.HiddenFor(model => model.Items2.BlogPostId)
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Items.PostTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Items.PostTitle, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Items.PostTitle, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group glyphicon-align-left">
+        @Html.LabelFor(model => model.Items.PostContent, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Items.PostContent, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Items.PostContent, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+        @{ 
+            HttpCookie AnotherCookie = Request.Cookies["UserModelKeeper"];
+             string usercontainer = AnotherCookie.Value;
+            
+
+        }
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Items2.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(x => x.Items2.Comment, new { @id = "summernote" })
+            @Html.ValidationMessageFor(model => model.Items2.Comment, "", new { @class = "text-danger" })
+        </div>
+    </div>
+        <!-- Hidden fields start from here. -->
+
+        <div class="form-group glyphicon-align-left hidden">
+            @Html.LabelFor(model => model.Items2.UserModelId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.UserIdContainer, new {@Value= usercontainer })
+                @Html.ValidationMessageFor(model => model.Items2.UserModelId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        
+        <!-- Hidden fields end here. -->
+
+        @*@{  {
+                HttpCookie AnotherCookie = Request.Cookies["UserModelKeeper"];
+                Model.UserIdContainer = int.Parse(AnotherCookie.Value);
+                Model.Items2.UserModelId = int.Parse(AnotherCookie.Value);
+                Model.Items2.BlogPostId = Model.Items.ID;
+           }
+          }*@
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+@*@if ((UserModel)Session["MyUsers"] != null)
+{
+    {
+        HttpCookie AnotherCookie = Request.Cookies["UserModelKeeper"];
+        Model.UserIdContainer= int.Parse(AnotherCookie.Value);
+        Model.Items2.UserModelId = int.Parse(AnotherCookie.Value);
+        Model.Items2.BlogPostId = Model.Items.ID;
+
+    }
+
+}*@
+<div>
+    @Html.ActionLink("Back to List", "Index", "Home", null, null)
+
+</div>
+
+<script>
+        $(document).ready(function () {
+            $('#summernote').summernote();
+        });
+</script>

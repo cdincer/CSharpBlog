@@ -26,6 +26,39 @@ namespace MVCBlog.Migrations
             //    Category = context.CategoryTable.FirstOrDefault(x=>x.CategoryName == "EF Add or Update Command Test")
             //});
 
+          
+
+            IList<Category> CategoryList = new List<Category>();
+
+
+
+            CategoryList.Add(new Category
+            {
+                CategoryName = " Skiing"
+            });
+
+            CategoryList.Add(new Category
+            {
+                CategoryName = " Boxing"
+            });
+
+            CategoryList.Add(new Category
+            {
+                CategoryName = " Racing"
+            });
+            CategoryList.Add(new Category
+            {
+                CategoryName = " Tennis"
+            });
+
+            CategoryList.Add(new Category
+            {
+                CategoryName = " Football"
+            });
+
+            foreach (Category categoryentry in CategoryList)
+                context.CategoryTable.Add(categoryentry);
+            base.Seed(context);
 
             IList<BlogPost> BlogPosts = new List<BlogPost>();
 
@@ -33,7 +66,8 @@ namespace MVCBlog.Migrations
             {
                 PostTitle = "Post1-Updated",
                 PostContent = "Post1 Content Updated by UI",
-                PostDate = DateTime.Parse("2017 - 09 - 01 12:35:00.000")
+                PostDate = DateTime.Parse("2017 - 09 - 01 12:35:00.000"
+               )
 
             });
             BlogPosts.Add(new BlogPost()
@@ -105,43 +139,10 @@ namespace MVCBlog.Migrations
             });
 
 
+            //foreach (BlogPost posting in BlogPosts)
+            //    context.BlogTable.Add(posting);
+            //base.Seed(context);
 
-            foreach (BlogPost posting in BlogPosts)
-                context.BlogTable.Add(posting);
-            base.Seed(context);
-
-
-            IList<Category> CategoryList = new List<Category>();
-
-
-
-            CategoryList.Add(new Category
-            {
-                CategoryName = " Skiing"
-            });
-
-            CategoryList.Add(new Category
-            {
-                CategoryName = " Boxing"
-            });
-
-            CategoryList.Add(new Category
-            {
-                CategoryName = " Racing"
-            });
-            CategoryList.Add(new Category
-            {
-                CategoryName = " Tennis"
-            });
-
-            CategoryList.Add(new Category
-            {
-                CategoryName = " Football"
-            });
-
-            foreach (Category categoryentry in CategoryList)
-                context.CategoryTable.Add(categoryentry);
-            base.Seed(context);
 
         }
 

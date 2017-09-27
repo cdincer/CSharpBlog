@@ -14,6 +14,7 @@ namespace MVCBlog.Controllers
         // GET: BlogPoster
         public ActionResult Poster()
         {
+           
             return View();
         }
 

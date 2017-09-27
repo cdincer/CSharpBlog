@@ -154,18 +154,17 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogEditorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CommentPostController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709261350267_UserId2.cs" />
-    <Compile Include="Migrations\201709261350267_UserId2.Designer.cs">
-      <DependentUpon>201709261350267_UserId2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BlogContext.cs" />
     <Compile Include="Models\BlogPost.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CommentPost.cs" />
+    <Compile Include="Models\CommentPostModel.cs" />
+    <Compile Include="Models\CommentViewModel.cs" />
     <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\PageViewModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -187,6 +186,7 @@
     <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Shared\_widget.cshtml" />
     <Content Include="Views\Home\GetPage2.cshtml" />
+    <Content Include="Views\CommentPost\CommentPoster.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -196,11 +196,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709261350267_UserId2.resx">
-      <DependentUpon>201709261350267_UserId2.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

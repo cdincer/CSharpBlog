@@ -43,7 +43,8 @@
     @foreach (var item in Model.Items3)
     {
         <li>@item.UserModel.Email</li>
-        <li>@item.Comment</li>
+        <li>@Html.Raw(@item.Comment)</li>
+        
 
     }
 </ul>
@@ -69,7 +70,10 @@
 
     @if ((UserModel)Session["MyUsers"] != null)
     {
-        @Html.ActionLink("Editor", "Editor", "BlogEditor", new { id = Model.Items.ID }, null)
+        { 
+            List<string> sl = HttpContext.Current.User.Identity.Name.Split(',').ToList();
+        }
+        @Html.ActionLink("Post a comment", "CommentPoster", "CommentPost", new { id = Model.Items.ID }, null)
 
     }
 
