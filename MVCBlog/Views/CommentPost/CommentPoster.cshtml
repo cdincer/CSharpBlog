@@ -75,14 +75,6 @@
         
         <!-- Hidden fields end here. -->
 
-        @*@{  {
-                HttpCookie AnotherCookie = Request.Cookies["UserModelKeeper"];
-                Model.UserIdContainer = int.Parse(AnotherCookie.Value);
-                Model.Items2.UserModelId = int.Parse(AnotherCookie.Value);
-                Model.Items2.BlogPostId = Model.Items.ID;
-           }
-          }*@
-
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Save" class="btn btn-default" />
@@ -90,17 +82,7 @@
     </div>
 </div>
 }
-@*@if ((UserModel)Session["MyUsers"] != null)
-{
-    {
-        HttpCookie AnotherCookie = Request.Cookies["UserModelKeeper"];
-        Model.UserIdContainer= int.Parse(AnotherCookie.Value);
-        Model.Items2.UserModelId = int.Parse(AnotherCookie.Value);
-        Model.Items2.BlogPostId = Model.Items.ID;
 
-    }
-
-}*@
 <div>
     @Html.ActionLink("Back to List", "Index", "Home", null, null)
 
