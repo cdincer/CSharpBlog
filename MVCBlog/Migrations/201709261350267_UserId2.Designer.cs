@@ -7,13 +7,13 @@ namespace MVCBlog.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class BlogPostIdaddedtoCommentposttable : IMigrationMetadata
+    public sealed partial class UserId2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(BlogPostIdaddedtoCommentposttable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UserId2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709261202344_BlogPostId added to Commentpost table"; }
+            get { return "201709261350267_UserId2"; }
         }
         
         string IMigrationMetadata.Source

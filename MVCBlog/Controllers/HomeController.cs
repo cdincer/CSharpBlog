@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using PagedList;
 using PagedList.Mvc;
 using MVCBlog.Models;
+using System.Data.Entity;
 
 namespace MVCBlog.Controllers
 {
@@ -41,7 +42,7 @@ namespace MVCBlog.Controllers
 
             var dummyItems2 = db.CategoryTable.FirstOrDefault(x => x.Id == dummyItems.CategoryId);
 
-            var dummyItems3 = db.CommentTable.Where(x=>x.BlogPostId== dummyItems.ID);
+            var dummyItems3 = db.CommentTable.Include(xa=>xa.UserModel).Where(x=>x.BlogPostId== dummyItems.ID);
         
 
 
@@ -90,3 +91,6 @@ namespace MVCBlog.Controllers
 
     }
 }
+
+
+

@@ -42,6 +42,7 @@
 <ul>
     @foreach (var item in Model.Items3)
     {
+        <li>@item.UserModel.Email</li>
         <li>@item.Comment</li>
 
     }
@@ -66,7 +67,12 @@
         @Html.ActionLink("Editor", "Editor", "BlogEditor", new { id = Model.Items.ID }, null)
     }
 
+    @if ((UserModel)Session["MyUsers"] != null)
+    {
+        @Html.ActionLink("Editor", "Editor", "BlogEditor", new { id = Model.Items.ID }, null)
 
-  
+    }
+
+
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -12,5 +12,10 @@ namespace MVCBlog.Models
 
         public int BlogPostId { get; set; }
         public BlogPost BlogPost { get; set; }
+
+
+        public int UserModelId { get; set; }
+        public UserModel UserModel { get; set; }
+
     }
 }

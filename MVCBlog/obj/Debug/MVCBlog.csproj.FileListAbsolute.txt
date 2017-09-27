@@ -142,6 +142,5 @@ C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\bin\System.Web.Mvc.xml
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.csprojResolveAssemblyReference.cache
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.dll
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.pdb
-C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.Migrations.BlogPostCategoryIDadd.resources
+C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.Migrations.UserId2.resources
 C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.csproj.GenerateResource.Cache
-C:\Users\CanD\Source\Repos\CSharpBlog\MVCBlog\obj\Debug\MVCBlog.Migrations.BlogPostIdaddedtoCommentposttable.resources
