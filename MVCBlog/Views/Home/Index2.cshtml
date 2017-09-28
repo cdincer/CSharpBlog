@@ -13,19 +13,28 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="col-md-6 col-md-offset-3">
-            <h1>ASP.NET MVC - Pagination Example</h1>
+    <div class="row">
 
-            <!-- items being paged -->
-            <ul>
-                @foreach (var item in Model.Items)
-                {
-                    <li>@item.PostContent</li>
-                    <li>@item.CommentPosts</li>
+        @foreach (var item in Model.Items)
 
-                }
-            </ul>
+        {
+
+            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    @*<a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>*@
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="/Home/GetPage/@item.ID">@item.PostTitle</a>
+                            <h4>@item.PostDate</h4>
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
 
             <!-- pager -->
             @if (Model.Pager.EndPage > 1)

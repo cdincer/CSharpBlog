@@ -62,7 +62,15 @@ namespace MVCBlog.Controllers
         public ActionResult BlogPostPage()
         {
             return View();
+
         }
+        public ActionResult BlogFilteredPage(int? Id)
+        {
+            var returnedlist = db.BlogTable.Where(x => x.CategoryId == Id);
+            return View(returnedlist);
+        }
+
+
 
         [HttpGet]
         public ActionResult Index2(int? page)

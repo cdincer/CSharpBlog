@@ -188,6 +188,8 @@
     <Content Include="Views\Shared\_widget.cshtml" />
     <Content Include="Views\Home\GetPage2.cshtml" />
     <Content Include="Views\CommentPost\CommentPoster.cshtml" />
+    <Content Include="Views\BlogEditor\CategoryPoster.cshtml" />
+    <Content Include="Views\Home\BlogFilteredPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

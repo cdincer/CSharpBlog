@@ -22,7 +22,23 @@ namespace MVCBlog.Controllers
             return View(NewBlogPost);
         }
 
+        public ActionResult CategoryPoster()
+        {
 
+
+            return View();
+
+        }
+        [HttpPost]
+        public ActionResult CategoryPoster(Category NewCategory)
+        {
+            db.CategoryTable.Add(NewCategory);
+            db.SaveChanges();
+
+
+            return View();
+
+        }
 
         public ActionResult BlogList()
         {
