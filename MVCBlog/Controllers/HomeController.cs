@@ -18,31 +18,25 @@ namespace MVCBlog.Controllers
         // GET: HomeS
        
 
-        public ActionResult GetPage(int id)
-        {
-            return View(db.BlogTable.Find(id));
-        }
-
-
-        public ActionResult GetPage2(int? id)
+        public ActionResult GetPage(int? id)
         {
             //var blog2 = context.Blogs
             //            .Where(b => b.Name == "ADO.NET Blog")
             //            .Include("Posts")
             //            .FirstOrDefault();
 
-            var dummyItems = db.BlogTable.FirstOrDefault(x=> x.ID==id);
+            var dummyItems = db.BlogTable.FirstOrDefault(x => x.ID == id);
 
             var dummyItems2 = db.CategoryTable.FirstOrDefault(x => x.Id == dummyItems.CategoryId);
 
-            var dummyItems3 = db.CommentTable.Include(xa=>xa.UserModel).Where(x=>x.BlogPostId== dummyItems.ID);
-        
+            var dummyItems3 = db.CommentTable.Include(xa => xa.UserModel).Where(x => x.BlogPostId == dummyItems.ID);
+
 
 
             var pageModel = new PageViewModel
             {
                 Items = dummyItems,
-               
+
 
                 Items2 = dummyItems2,
                 Items3 = dummyItems3
@@ -51,6 +45,8 @@ namespace MVCBlog.Controllers
             return View(pageModel);
         }
 
+
+      
         //This is for reading a Blog Post not actually posting it.
         public ActionResult BlogPostPage()
         {

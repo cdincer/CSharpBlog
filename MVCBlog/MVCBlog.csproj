@@ -184,9 +184,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Home\GetPage.cshtml" />
     <Content Include="Views\BlogEditor\BlogList.cshtml" />
-    <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Shared\_widget.cshtml" />
-    <Content Include="Views\Home\GetPage2.cshtml" />
     <Content Include="Views\CommentPost\CommentPoster.cshtml" />
     <Content Include="Views\BlogEditor\CategoryPoster.cshtml" />
     <Content Include="Views\Home\BlogFilteredPage.cshtml" />

@@ -1,51 +1,82 @@
-﻿@using MVCBlog.Models
-@model MVCBlog.Models.BlogPost
-
+﻿
 @{
-    ViewBag.Title = "GetPage";
+    ViewBag.Title = "GetPage2";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
+@using MVCBlog.Models
+@model MVCBlog.Models.PageViewModel
+<h2>GetPage2</h2>
 
-<h2>GetPage</h2>
 
 <div>
     <h4>BlogPost</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PostTitle)
+            @Html.DisplayNameFor(model => model.Items.PostTitle)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PostTitle)
+            @Html.DisplayFor(model => model.Items.PostTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Items2.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Items2.CategoryName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Items.PostDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Items.PostDate)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PostContent)
+            @Html.DisplayNameFor(model => model.Items.PostContent)
         </dt>
 
         <dd>
-            @Html.Raw( Model.PostContent)
+            @Html.Raw(Model.Items.PostContent)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PostDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PostDate)
-        </dd>
 
     </dl>
 </div>
+
+
+<ul>
+    @foreach (var item in Model.Items3)
+    {
+        <li>@item.UserModel.Email</li>
+        <li>@Html.Raw(@item.Comment)</li>
+
+
+    }
+</ul>
+
+
+
+
+
 <p>
 
     @if ((UserModel)Session["MyUsers"] != null && ((UserModel)Session["MyUsers"]).UserRole == "Admin")
     {
-        @Html.ActionLink("Editor", "Editor", "BlogEditor", new { id = Model.ID }, null)
+        @Html.ActionLink("Editor", "Editor", "BlogEditor", new { id = Model.Items.ID }, null)
+    }
+
+    @if ((UserModel)Session["MyUsers"] != null)
+    {
+        {
+            List<string> sl = HttpContext.Current.User.Identity.Name.Split(',').ToList();
+        }
+        @Html.ActionLink("Post a comment", "CommentPoster", "CommentPost", new { id = Model.Items.ID }, null)
+
     }
 
 
-  
     @Html.ActionLink("Back to List", "Index")
 </p>
