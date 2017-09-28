@@ -188,6 +188,8 @@
     <Content Include="Views\CommentPost\CommentPoster.cshtml" />
     <Content Include="Views\BlogEditor\CategoryPoster.cshtml" />
     <Content Include="Views\Home\BlogFilteredPage.cshtml" />
+    <Content Include="Views\Home\AdminPanel.cshtml" />
+    <Content Include="Views\BlogEditor\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

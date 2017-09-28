@@ -1,0 +1,52 @@
+﻿@using MVCBlog.Models
+
+
+@{
+    ViewBag.Title = "AdminPanel";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+} 
+}
+
+@if ((UserModel)Session["MyUsers"] != null && ((UserModel)Session["MyUsers"]).UserRole == "Admin")
+{
+    <div>
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog Item Poster</h4>
+                        <p class="card-text"></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/BlogEditor/Poster" class="btn btn-primary">Click here to post articles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Category Item Poster</h4>
+                        <p class="card-text"></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/BlogEditor/CategoryPoster" class="btn btn-primary">Click here to post categories</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog Post List Viewer</h4>
+                        <p class="card-text"></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/BlogEditor/BlogList" class="btn btn-primary">Click here to view all blogs and edit them.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

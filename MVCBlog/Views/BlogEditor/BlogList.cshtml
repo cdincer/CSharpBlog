@@ -8,7 +8,7 @@
 <h2>BlogList </h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Poster")
 </p>
 <table class="table">
     <tr>
@@ -37,7 +37,7 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Editor", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Details", "GetPage", "Home", new { id = item.ID }, null)|
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>

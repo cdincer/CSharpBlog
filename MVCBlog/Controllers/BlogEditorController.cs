@@ -24,19 +24,34 @@ namespace MVCBlog.Controllers
 
         public ActionResult CategoryPoster()
         {
-
-
             return View();
 
+        }
+
+        public ActionResult Delete(int? id)
+        {
+            var data = db.BlogTable.FirstOrDefault(x => x.ID == id);
+            return View(data);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(BlogPost returned)
+        {
+            db.BlogTable.Attach(returned);
+            db.BlogTable.Remove(returned);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
         }
         [HttpPost]
         public ActionResult CategoryPoster(Category NewCategory)
         {
             db.CategoryTable.Add(NewCategory);
             db.SaveChanges();
+            return RedirectToAction("Index", "Home");
 
 
-            return View();
+            //return View();
 
         }
 

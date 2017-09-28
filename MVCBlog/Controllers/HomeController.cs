@@ -45,8 +45,15 @@ namespace MVCBlog.Controllers
             return View(pageModel);
         }
 
+        public ActionResult AdminPanel()
+        {
+            return View();
 
-      
+        }
+
+        
+
+
         //This is for reading a Blog Post not actually posting it.
         public ActionResult BlogPostPage()
         {
