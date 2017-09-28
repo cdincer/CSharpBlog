@@ -16,15 +16,12 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+                @if ((UserModel)Session["MyUsers"] == null )
+                {
                 <li class="nav-item">
                     <a class="nav-link" href="/Account/Login/">Login</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
+                }
                 @if ((UserModel)Session["MyUsers"] != null && ((UserModel)Session["MyUsers"]).UserRole == "Admin")
                 {
                     <li class="nav-item">
