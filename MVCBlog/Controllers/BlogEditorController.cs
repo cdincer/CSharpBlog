@@ -14,8 +14,12 @@ namespace MVCBlog.Controllers
         // GET: BlogPoster
         public ActionResult Poster()
         {
-           
-            return View();
+            var NewBlogPost = new BlogPosterViewModel();
+            NewBlogPost.Items = new BlogPost();
+            NewBlogPost.Items2 = db.CategoryTable.OrderBy(x => x.CategoryName).ToList();
+
+            ViewBag.ListOfCategories = new SelectList(NewBlogPost.Items2,"ID", "CategoryName");
+            return View(NewBlogPost);
         }
 
 
@@ -27,9 +31,11 @@ namespace MVCBlog.Controllers
         }
 
         [HttpPost]
-        public ActionResult Poster(BlogPost PostNew)
+        public ActionResult Poster(BlogPosterViewModel PostNew)
         {
-            db.BlogTable.Add(PostNew);
+            BlogPost addPost = PostNew.Items;
+            addPost.CategoryId = int.Parse(PostNew.CategoryCarrier);
+            db.BlogTable.Add(addPost);
             db.SaveChanges();
                 
                 return RedirectToAction("Index","Home");
@@ -38,6 +44,7 @@ namespace MVCBlog.Controllers
 
         public ActionResult Editor(int id)
         {
+
             return View(db.BlogTable.Find(id));
         }
 

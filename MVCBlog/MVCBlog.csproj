@@ -161,6 +161,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BlogContext.cs" />
     <Compile Include="Models\BlogPost.cs" />
+    <Compile Include="Models\BlogPosterViewModel.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CommentPost.cs" />
     <Compile Include="Models\CommentPostModel.cs" />
