@@ -13,68 +13,76 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="row">
+    <div class="container">
 
-        @foreach (var item in Model.Items)
+        <div class="row">
 
-        {
+            @foreach (var item in Model.Items)
 
-            <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    @*<a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>*@
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="/Home/GetPage/@item.ID">@item.PostTitle</a>
-                            <h4>@item.PostDate</h4>
-                        </h4>
+            {
 
+                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                    <div class="card h-100">
+                        @*<a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>*@
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="/Home/GetPage/@item.ID">@item.PostTitle</a>
+                                <h4>@item.PostDate</h4>
+                            </h4>
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        }
-    </div>
-    <div>
-        <div>
-
-            <!-- pager -->
-            @if (Model.Pager.EndPage > 1)
-            {
-                <ul class="pagination">
-                    @if (Model.Pager.CurrentPage > 1)
-                    {
-                        <li>
-                            <a href="~/Home/Index">First</a>
-                        </li>
-                        <li>
-                            <a href="~/Home/Index?page=@(Model.Pager.CurrentPage - 1)">Previous</a>
-                        </li>
-                    }
-
-                    @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
-                    {
-                        <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
-                            <a href="~/Home/Index?page=@page">@page</a>
-                        </li>
-                    }
-
-                    @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
-                    {
-                        <li>
-                            <a href="~/Home/Index?page=@(Model.Pager.CurrentPage + 1)">Next</a>
-                        </li>
-                        <li>
-                            <a href="~/Home/Index?page=@(Model.Pager.TotalPages)">Last</a>
-                        </li>
-                    }
-                </ul>
             }
         </div>
+        @Html.Partial("_widget")
     </div>
-    @Html.Partial("_widget")
 
 
-    <hr />
+        <div>
+            <div>
+
+                <!-- pager -->
+                @if (Model.Pager.EndPage > 1)
+            {
+                    <ul class="pagination">
+                        @if (Model.Pager.CurrentPage > 1)
+                        {
+                            <li>
+                                <a href="~/Home/Index">First</a>
+                            </li>
+                            <li>
+                                <a href="~/Home/Index?page=@(Model.Pager.CurrentPage - 1)">Previous</a>
+                            </li>
+                        }
+
+                        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+                        {
+                            <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                                <a href="~/Home/Index?page=@page">@page</a>
+                            </li>
+                        }
+
+                        @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
+                        {
+                            <li>
+                                <a href="~/Home/Index?page=@(Model.Pager.CurrentPage + 1)">Next</a>
+                            </li>
+                            <li>
+                                <a href="~/Home/Index?page=@(Model.Pager.TotalPages)">Last</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+
+        @*Original Widget Location*@
+        @*@Html.Partial("_widget")*@
+
+
+        <hr />
 
 
 </body>
