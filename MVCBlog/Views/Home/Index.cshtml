@@ -1,23 +1,21 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
 
-@using PagedList
-@using PagedList.Mvc
 
-@using MVCBlog.Models
-@model IPagedList<BlogPost>
+@model MVCBlog.Models.IndexViewModel
 
-<div class="container">
-    <h1 class="my-4">
-        A01 Blog
-    </h1>
+<html>
+<head>
+    <title>ASP.NET MVC - Pagination Example</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
     <div class="row">
 
-        @foreach (var item in Model)
+        @foreach (var item in Model.Items)
 
         {
 
@@ -29,7 +27,7 @@
                             <a href="/Home/GetPage/@item.ID">@item.PostTitle</a>
                             <h4>@item.PostDate</h4>
                         </h4>
-                        
+
                     </div>
                 </div>
             </div>
@@ -38,50 +36,49 @@
     </div>
 
 
-</div>
+    <!-- pager -->
+    @if (Model.Pager.EndPage > 1)
+            {
+        <ul class="pagination">
+            @if (Model.Pager.CurrentPage > 1)
+            {
+                <li>
+                    <a href="~/Home/Index">First</a>
+                </li>
+                        <li>
+                            <a href="~/Home/Index?page=@(Model.Pager.CurrentPage - 1)">Previous</a>
+                        </li>
+            }
 
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }), PagedListRenderOptions.Minimal)
+            @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+            {
+                <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                    <a href="~/Home/Index?page=@page">@page</a>
+                </li>
+            }
 
-
-
-
-    @*Old Stuff*@
-    @*<h2>Index</h2>*@
-
-    @*<p>
-            @Html.ActionLink("Create New", "Create")
+            @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
+            {
+                <li>
+                    <a href="~/Home/Index?page=@(Model.Pager.CurrentPage + 1)">Next</a>
+                </li>
+                        <li>
+                            <a href="~/Home/Index?page=@(Model.Pager.TotalPages)">Last</a>
+                        </li>
+            }
+        </ul>
+    }
+    </div>
+    </div>
+    <hr />
+    <div class="credits text-center">
+        <p>
+            <a href="http://jasonwatmore.com/post/2015/10/30/ASPNET-MVC-Pagination-Example-with-Logic-like-Google.aspx">ASP.NET MVC - Pagination Example with Logic like Google</a>
         </p>
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.PostTitle)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PostContent)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PostDate)
-                </th>
-                <th></th>
-            </tr>
-
-        @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostTitle)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostContent)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostDate)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-                </td>
-            </tr>
-        }
-
-        </table>*@
+        <p>
+            <a href="http://jasonwatmore.com">JasonWatmore.com</a>
+        </p>
+    </div>
+</body>
+</html>
+@Html.Partial("_widget")

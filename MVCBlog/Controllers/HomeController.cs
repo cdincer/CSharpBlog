@@ -16,14 +16,7 @@ namespace MVCBlog.Controllers
         public MVCBlog.Models.BlogContext db = new MVCBlog.Models.BlogContext();
 
         // GET: HomeS
-        public ActionResult Index(int? page)
-        {
-            int pageIndex = page ?? 1;
-
-            var data = db.BlogTable.OrderBy(x => x.ID).ToPagedList(pageIndex,10);
-            //var model = db.BlogTables.ToList();
-            return View(data);
-        }
+       
 
         public ActionResult GetPage(int id)
         {
@@ -73,7 +66,7 @@ namespace MVCBlog.Controllers
 
 
         [HttpGet]
-        public ActionResult Index2(int? page)
+        public ActionResult Index(int? page)
         {
             var dummyItems = db.BlogTable.OrderBy(x => x.ID);
             var dummyItems2 = db.CategoryTable.OrderBy(x => x.CategoryName);
