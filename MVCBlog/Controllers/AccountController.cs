@@ -90,7 +90,21 @@ namespace MVCBlog.Controllers
 
         public ActionResult Register()
         {
+            string[] Roles = { "Admin", "User"};
+
+            ViewBag.ListOfCategories = Roles
+    .Select((r, index) => new SelectListItem { Text = r, Value = index.ToString() }).ToList();
+
             return View();
+        }
+
+        [HttpPost]
+
+             public ActionResult Register(UserModel returned)
+          {
+            db.UserTable.Add(returned);
+            db.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
 
         //[HttpPost]
