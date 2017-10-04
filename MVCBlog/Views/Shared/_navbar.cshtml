@@ -32,6 +32,12 @@
                     </li>
                 }
 
+                @if ((UserModel)Session["MyUsers"] != null)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/LogOut/">Log Out</a>
+                    </li>
+                }
                 <li class="nav-item">
                     <a class="nav-link" href="/Home/Index">Back To List</a>
                 </li>

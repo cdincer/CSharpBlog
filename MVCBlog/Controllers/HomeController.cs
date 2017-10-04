@@ -7,6 +7,7 @@ using PagedList;
 using PagedList.Mvc;
 using MVCBlog.Models;
 using System.Data.Entity;
+using System.Web.Security;
 
 namespace MVCBlog.Controllers
 {
@@ -91,7 +92,12 @@ namespace MVCBlog.Controllers
 
             return View(viewModel);
         }
-
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("Index", "Home");
+        }
 
     }
 }
