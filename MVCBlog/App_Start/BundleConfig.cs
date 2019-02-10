@@ -14,22 +14,22 @@ namespace MVCBlog.App_Start
             #region SiteLayout
 
             bundles.Add(new StyleBundle("~/style/bundles").Include(
-              "~/vendor/bootstrap/css/bootstrap.css",
-              "~/vendor/bootstrap/css/bootstrap.min.css",
+              "~/thirdparty/bootstrap/css/bootstrap.css",
+              "~/thirdparty/bootstrap/css/bootstrap.min.css",
               "~/css/blog-home.css",
               "~/Summernote/css/bootstrap.css",
               "~/Summernote/css/summernote.css"
               ));
 
             bundles.Add(new ScriptBundle("~/script/bundles").Include(
-                "~/vendor/jquery/jquery.js",
-                "~/vendor/jquery/jquery.min.js",
-                "~/vendor/popper/popper.min.js",
-                "~/vendor/bootstrap/js/bootstrap.min.js",
+                "~/thirdparty/jquery/jquery.js",
+                "~/thirdparty/jquery/jquery.min.js",
+                "~/thirdparty/popper/popper.min.js",
+                "~/thirdparty/bootstrap/js/bootstrap.min.js",
                 "~/js/clean-blog.min.js",
-                "~/vendor/Summernote/js/bootstrap.js",
-                "~/vendor/Summernote/js/jquery.js",
-                "~/vendor/Summernote/js/summernote.js"
+                "~/thirdparty/Summernote/js/bootstrap.js",
+                "~/thirdparty/Summernote/js/jquery.js",
+                "~/thirdparty/Summernote/js/summernote.js"
                 ));
 
             #endregion
