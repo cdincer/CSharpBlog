@@ -27,9 +27,9 @@ namespace MVCBlog.App_Start
                 "~/vendor/popper/popper.min.js",
                 "~/vendor/bootstrap/js/bootstrap.min.js",
                 "~/js/clean-blog.min.js",
-                "~/Summernote/js/bootstrap.js",
-                "~/Summernote/js/jquery.js",
-                "~/Summernote/js/summernote.js"
+                "~/vendor/Summernote/js/bootstrap.js",
+                "~/vendor/Summernote/js/jquery.js",
+                "~/vendor/Summernote/js/summernote.js"
                 ));
 
             #endregion

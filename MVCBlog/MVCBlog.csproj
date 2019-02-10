@@ -126,11 +126,11 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="js\gulpfile.js" />
-    <Content Include="Summernote\css\bootstrap.css" />
-    <Content Include="Summernote\css\summernote.css" />
-    <Content Include="Summernote\js\bootstrap.js" />
-    <Content Include="Summernote\js\jquery.js" />
-    <Content Include="Summernote\js\summernote.js" />
+    <Content Include="vendor\Summernote\css\bootstrap.css" />
+    <Content Include="vendor\Summernote\css\summernote.css" />
+    <Content Include="vendor\Summernote\js\bootstrap.js" />
+    <Content Include="vendor\Summernote\js\jquery.js" />
+    <Content Include="vendor\Summernote\js\summernote.js" />
     <Content Include="vendor\bootstrap\blog-home.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
